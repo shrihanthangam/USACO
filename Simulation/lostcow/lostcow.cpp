@@ -20,6 +20,15 @@ int main() {
             }
             move *= -2;
         }
+    } else if (y < x) {
+        while (y < x) {
+            dist += abs((startX+move)-x);
+            x = startX+move;
+            if (x <= y) {
+                dist -= abs(y-x);
+            }
+            move *= -2;
+        }
     }
 
     fout << dist << endl;
